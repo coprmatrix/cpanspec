@@ -1,0 +1,12 @@
+diff --git a/cpanspec b/cpanspec
+index 58fdce5..3611f87 100755
+--- a/cpanspec
++++ b/cpanspec
+@@ -1232,6 +1232,7 @@ END
+ 
+     printf $spec "%-16s%s\n", "BuildRequires:", "perl";
+     printf $spec "%-16s%s\n", "BuildRequires:", "perl-macros";
++    printf $spec "%-16s%s\n", "BuildRequires:", "(rpm-build-perl or perl-generators)";
+ 
+     for my $dep (keys(%requires)) {
+         next if ($dep eq 'perl');
