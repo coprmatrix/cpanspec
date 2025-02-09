@@ -56,6 +56,7 @@ Requires:       perl(Pod::POM)
 Requires:       perl(Pod::Simple::TextContent)
 Requires:       perl(Text::Autoformat)
 Requires:       perl(Text::Capitalize)
+Requires:       perl(FFI::CheckLib)
 Requires:       perl(YAML)
 Requires:       perl(YAML::XS)
 #Recommends:     obs-service-format_spec_file
