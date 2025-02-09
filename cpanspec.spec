@@ -42,6 +42,7 @@ BuildRequires:  perl(Pod::Simple::TextContent)
 BuildRequires:  perl(Text::Autoformat)
 BuildRequires:  perl(YAML)
 BuildRequires:  perl(YAML::XS)
+BuildRequires:  sed
 Requires:       perl(Algorithm::Diff)
 Requires:       perl(Archive::Tar)
 Requires:       perl(Archive::Zip)
@@ -74,6 +75,7 @@ module distribution.
 %prep
 %autosetup -p1 -n %{cpan_name}-%{version}
 find . -type f -print0 | xargs -0 chmod 644
+sed 's/\(our[[:space:]]*$VERSION[[:space:]]*=[[:space:]]*'"'"'\)\(.*\)\('"'"'.*\)/\1%{version}\3/g;' cpanspec
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor

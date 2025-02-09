@@ -1,7 +1,7 @@
 <services>
   <service name="obs_scm">
     <param name="versionrewrite-pattern">.*</param>
-    <param name="versionrewrite-replacement">2.85.00</param>
+    <param name="versionrewrite-replacement">2.87.00</param>
     <param name="url">https://github.com/huakim/cpanspec</param>
     <param name="scm">git</param>
     <param name="changesgenerate">enable</param>
