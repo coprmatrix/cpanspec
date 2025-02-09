@@ -1,20 +1,21 @@
 <services>
   <service name="obs_scm">
-    <param name="versionprefix">2.85.00</param>
+    <param name="versionrewrite-pattern">.*</param>
+    <param name="versionrewrite-replacement">2.85.00</param>
     <param name="url">https://github.com/huakim/cpanspec</param>
     <param name="scm">git</param>
     <param name="changesgenerate">enable</param>
     <param name="changesauthor">Tina Müller &lt;tina.mueller@suse.com&gt;</param>
     <param name="revision">master</param>
-    <param name="without-version">enable</param>
+    <param name="without-version">disable</param>
   </service>
-  <service name="run" mode="buildtime">
+  <!--service name="run" mode="buildtime">
     <param name="command">source main.sh</param>
-  </service>
+  </service-->
   <service name="tar" mode="buildtime"/>
   <service name="recompress" mode="buildtime">
     <param name="compression">xz</param>
     <param name="file">*.tar</param>
   </service>
-  <service name="set_version" mode="buildtime"/>
+  <!--service name="set_version" mode="buildtime"/-->
 </services>
