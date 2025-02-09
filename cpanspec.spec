@@ -75,7 +75,7 @@ module distribution.
 %prep
 %autosetup -p1 -n %{cpan_name}-%{version}
 find . -type f -print0 | xargs -0 chmod 644
-sed 's/\(our[[:space:]]*$VERSION[[:space:]]*=[[:space:]]*'"'"'\)\(.*\)\('"'"'.*\)/\1%{version}\3/g;' cpanspec
+sed -i 's/\(our[[:space:]]*$VERSION[[:space:]]*=[[:space:]]*'"'"'\)\(.*\)\('"'"'.*\)/\1%{version}\3/;' cpanspec
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
