@@ -43,6 +43,7 @@ BuildRequires:  perl(Text::Autoformat)
 BuildRequires:  perl(YAML)
 BuildRequires:  perl(YAML::XS)
 BuildRequires:  sed
+BuildRequires:  perl(Capture::Tiny)
 Requires:       perl(Algorithm::Diff)
 Requires:       perl(Archive::Tar)
 Requires:       perl(Archive::Zip)
