@@ -1,7 +1,8 @@
 <services>
   <service name="obs_scm">
-    <param name="versionrewrite-pattern">.*</param>
-    <param name="versionrewrite-replacement">2.90.00</param>
+    <!--param name="versionrewrite-pattern">.*</param-->
+    <!--param name="versionrewrite-replacement">2.90.01</param-->
+    <param name="versionformat">2.90.02</param>
     <param name="url">https://github.com/huakim/cpanspec</param>
     <param name="scm">git</param>
     <param name="changesgenerate">enable</param>
